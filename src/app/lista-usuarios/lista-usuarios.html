@@ -1,0 +1,12 @@
+<main class="main">
+
+<h2>Lista de Usuarios</h2>
+
+<nav *ngFor="let usuario of usuarios">
+  <br>
+  <a [routerLink]="['/usuario', usuario.id, usuario.nombre]">
+    {{ usuario.nombre }} 
+    {{ usuario.apellido }}
+  </a>
+</nav>
+</main>
