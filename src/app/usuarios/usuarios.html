@@ -4,18 +4,12 @@
   <h3>ID: {{ usuario.id }}</h3>
   <h3>Nombre: {{ usuario.nombre }}</h3>
   <h3>Apellido: {{ usuario.apellido }}</h3>
-
-
-  <button (click)="siguienteUsuario()">
-    Siguiente 
-  </button>
-
+  <button (click)="siguienteUsuario()">Siguiente </button>
 </nav>
 
-<ng-template #usuarioNoExiste>
+<nav *ngIf #usuarioNoExiste>
   <h2>Usuario no encontrado en el sistema</h2>
-</ng-template>
-
+</nav>
 <br>
 <a routerLink="/usuarios">Volver a la lista de usuarios</a>
 </main>
